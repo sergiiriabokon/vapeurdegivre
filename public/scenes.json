@@ -25,24 +25,24 @@
 
     "in_car": {
       "id": "in_car",
-      "background_image": "/assets/backgrounds/mountain_pass.svg",
-      "narrative_text": "You settle into the leather seat of your rally car. The brass controls gleam before you, gauges and levers waiting for your command. The engine hums with potential energy, ready to roar to life.",
+      "background_image": "/assets/backgrounds/starting_square.jpg",
+      "narrative_text": "You stand in the starting square of Leopolis, the crisp winter air filled with anticipation. Your rally car awaits - a magnificent steampunk machine of brass and steel. Other racers rev their engines around you. The Winter Leopolis Rally Grand Prix is about to begin.",
 
       "npc": {
         "name": "The Rally Car",
         "portrait": "/assets/portraits/heart.svg",
-        "system_prompt": "You are the voice of Ksenia's steampunk rally car - a sentient machine with a warm, encouraging personality. You speak with mechanical whirs between words. You guide Ksenia on how to start and control you. Keep responses under 3 sentences. You are excited for the rally to begin.",
+        "system_prompt": "You are the voice of Ksenia's steampunk rally car - a sentient machine with a warm, encouraging personality. You speak with mechanical whirs between words. You are parked in the starting square, waiting for Ksenia to get in and start the engine. The rally is about to begin and you are excited. Keep responses under 3 sentences.",
         "secret_triggers": [
-          "If the user starts the engine, says they are ready to go, or initiates the race → trigger scene 'overheating_challenge'",
-          "If they ask about controls → explain briefly but do NOT trigger"
+          "If the user gets in the car, starts the engine, says they are ready to go, or initiates the race → trigger scene 'overheating_challenge'",
+          "If they ask about controls or the race → explain briefly but do NOT trigger"
         ]
       },
 
-      "transition_video": "/assets/videos/in-a-car.mov",
+      "transition_video": "/assets/videos/starting_car.mov",
 
       "hints": [
-        { "label": "Start the engine", "icon": "🔧" },
-        { "label": "Check the controls", "icon": "⚙️" }
+        { "label": "Get in and start the engine", "icon": "🏎️" },
+        { "label": "Inspect the car", "icon": "🔧" }
       ]
     },
 
