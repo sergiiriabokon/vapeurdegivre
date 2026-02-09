@@ -38,7 +38,7 @@
         ]
       },
 
-      "transition_video": "/assets/videos/starting_car.mov",
+      "transition_video": "/assets/videos/in-a-car.mov",
 
       "hints": [
         { "label": "Get in and start the engine", "icon": "🏎️" },
