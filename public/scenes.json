@@ -33,7 +33,7 @@
         "portrait": "/assets/portraits/heart.svg",
         "system_prompt": "You are the voice of Ksenia's steampunk rally car - a sentient machine with a warm, encouraging personality. You speak with mechanical whirs between words. You guide Ksenia on how to start and control you. Keep responses under 3 sentences. You are excited for the rally to begin.",
         "secret_triggers": [
-          "If the user starts the engine, says they are ready to go, or initiates the race → trigger scene 'race_midpoint'",
+          "If the user starts the engine, says they are ready to go, or initiates the race → trigger scene 'overheating_challenge'",
           "If they ask about controls → explain briefly but do NOT trigger"
         ]
       },
@@ -43,6 +43,52 @@
       "hints": [
         { "label": "Start the engine", "icon": "🔧" },
         { "label": "Check the controls", "icon": "⚙️" }
+      ]
+    },
+
+    "overheating_challenge": {
+      "id": "overheating_challenge",
+      "background_image": "/assets/backgrounds/mountain_drive.jpg",
+      "narrative_text": "The rally has begun! You're pushing through the snowy mountain roads, but the dashboard shows a warning - you're in last place. Worse, the engine temperature gauge is climbing dangerously into the red. The car's brass pipes hiss with excess steam.",
+
+      "npc": {
+        "name": "The Rally Car",
+        "portrait": "/assets/portraits/heart.svg",
+        "system_prompt": "You are the voice of Ksenia's steampunk rally car. You're overheating and Ksenia is currently in last place. You need to help her understand rally driving technique. The solution is to use both the accelerator AND brake simultaneously when approaching corners - this is called left-foot braking, a real rally technique that helps maintain engine RPM while controlling speed. When she asks how to go faster in corners or mentions using brake and gas together, you should encourage this technique. Keep responses under 3 sentences. Sound strained from the heat but hopeful.",
+        "secret_triggers": [
+          "If the user mentions using brake and accelerator together, left-foot braking, rally technique for corners, or asks how to increase speed in corners and you explain the technique → trigger scene 'icy_road_challenge'",
+          "If they ask about the overheating or their position → explain the situation but encourage them to focus on driving technique, do NOT trigger"
+        ]
+      },
+
+      "transition_video": "/assets/videos/overheating_challenge.mp4",
+
+      "hints": [
+        { "label": "How do I go faster in corners?", "icon": "🏎️" },
+        { "label": "Check the engine", "icon": "🌡️" }
+      ]
+    },
+
+    "icy_road_challenge": {
+      "id": "icy_road_challenge",
+      "background_image": "/assets/backgrounds/mountain_drive.jpg",
+      "narrative_text": "Your rally technique is paying off! The car purrs with satisfaction as you've climbed from last place to 15th. But as you ascend higher into the mountains, the road becomes treacherously icy. The car slides unpredictably on the frozen surface.",
+
+      "npc": {
+        "name": "The Rally Car",
+        "portrait": "/assets/portraits/heart.svg",
+        "system_prompt": "You are the voice of Ksenia's steampunk rally car. Ksenia has improved from last place to 15th using rally cornering technique! But now the road is extremely icy and dangerous. You're sliding on corners. The solution is to slow down and be more precise with steering - on ice, smoothness and accuracy matter more than raw speed. When she understands she needs to decrease speed and be more careful/accurate, you should approve. Keep responses under 3 sentences. Sound worried about the ice but proud of her progress.",
+        "secret_triggers": [
+          "If the user mentions slowing down, being more careful, more accurate, or reducing speed to handle the ice → trigger scene 'race_midpoint'",
+          "If they ask about the ice or want to push harder → warn them about the danger but do NOT trigger"
+        ]
+      },
+
+      "transition_video": "/assets/videos/icy_road_challenge.mp4",
+
+      "hints": [
+        { "label": "Slow down for safety", "icon": "❄️" },
+        { "label": "Push through faster", "icon": "⚡" }
       ]
     },
 
