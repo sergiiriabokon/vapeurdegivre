@@ -16,6 +16,7 @@ export interface Scene {
   narrative_text: string;
   npc: NPC;
   transition_video?: string;
+  transition_duration?: number;
   hints?: Hint[];
 }
 

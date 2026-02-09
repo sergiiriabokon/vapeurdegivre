@@ -6,6 +6,7 @@ export class VideoPlayer {
   private skipButton: HTMLButtonElement | null = null;
   private fadeOverlay: HTMLElement | null = null;
   private resolvePlay: (() => void) | null = null;
+  private durationTimeout: number | null = null;
 
   constructor(selector: string) {
     const el = document.querySelector<HTMLElement>(selector);
@@ -55,11 +56,17 @@ export class VideoPlayer {
     });
   }
 
-  async play(videoUrl: string): Promise<void> {
+  async play(videoUrl: string, maxDuration?: number): Promise<void> {
     if (!this.videoElement) return Promise.resolve();
 
     return new Promise((resolve) => {
       this.resolvePlay = resolve;
+
+      // Clear any existing duration timeout
+      if (this.durationTimeout) {
+        clearTimeout(this.durationTimeout);
+        this.durationTimeout = null;
+      }
 
       // Reset state
       this.skipButton?.classList.remove('visible');
@@ -71,6 +78,13 @@ export class VideoPlayer {
 
       // Show player
       this.element.classList.add('active');
+
+      // Set duration timeout if specified
+      if (maxDuration && maxDuration > 0) {
+        this.durationTimeout = window.setTimeout(() => {
+          this.onVideoEnd();
+        }, maxDuration * 1000);
+      }
 
       // Start playback
       this.videoElement!.play().catch((error) => {
@@ -88,6 +102,12 @@ export class VideoPlayer {
   }
 
   private async onVideoEnd(): Promise<void> {
+    // Clear duration timeout
+    if (this.durationTimeout) {
+      clearTimeout(this.durationTimeout);
+      this.durationTimeout = null;
+    }
+
     // Fade to black
     this.fadeOverlay?.classList.add('active');
 

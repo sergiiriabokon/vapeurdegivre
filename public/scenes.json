@@ -39,6 +39,7 @@
       },
 
       "transition_video": "/assets/videos/in-a-car.mov",
+      "transition_duration": 2,
 
       "hints": [
         { "label": "Get in and start the engine", "icon": "🏎️" },
@@ -62,6 +63,7 @@
       },
 
       "transition_video": "/assets/videos/overheating_challenge.mp4",
+      "transition_duration": 5,
 
       "hints": [
         { "label": "How do I go faster in corners?", "icon": "🏎️" },
@@ -79,12 +81,13 @@
         "portrait": "/assets/portraits/heart.svg",
         "system_prompt": "You are the voice of Ksenia's steampunk rally car. Ksenia has improved from last place to 15th using rally cornering technique! But now the road is extremely icy and dangerous. You're sliding on corners. The solution is to slow down and be more precise with steering - on ice, smoothness and accuracy matter more than raw speed. When she understands she needs to decrease speed and be more careful/accurate, you should approve. Keep responses under 3 sentences. Sound worried about the ice but proud of her progress.",
         "secret_triggers": [
-          "If the user mentions slowing down, being more careful, more accurate, or reducing speed to handle the ice → trigger scene 'race_midpoint'",
+          "If the user mentions slowing down, being more careful, more accurate, or reducing speed to handle the ice → trigger scene 'car_breakdown'",
           "If they ask about the ice or want to push harder → warn them about the danger but do NOT trigger"
         ]
       },
 
       "transition_video": "/assets/videos/icy_road_challenge.mp4",
+      "transition_duration": 5,
 
       "hints": [
         { "label": "Slow down for safety", "icon": "❄️" },
@@ -92,26 +95,24 @@
       ]
     },
 
-    "race_midpoint": {
-      "id": "race_midpoint",
-      "background_image": "/assets/backgrounds/mountain_pass.svg",
-      "narrative_text": "Your rally car roars through the mountain pass. Snow swirls around you as the city fades behind. Ahead, a mysterious figure blocks the narrow path, wrapped in tattered furs and ancient brass armor.",
+    "car_breakdown": {
+      "id": "car_breakdown",
+      "background_image": "/assets/backgrounds/car_broken.png",
+      "narrative_text": "A loud crack echoes through the mountains as your rally car shudders to a halt. Steam hisses from the engine, and the dashboard lights flicker and die. You step out into the cold mountain air. The car is broken, but ahead you see a path leading up into the mountains. Perhaps there's help to be found above.",
 
       "npc": {
-        "name": "The Mountain Hermit",
-        "portrait": "/assets/portraits/hermit.svg",
-        "system_prompt": "You are a mysterious hermit living in the mountains outside Leopolis. You speak in riddles and know ancient secrets about the Clockwork Heart. You are testing Ksenia's worthiness. Your riddle is: 'What has gears but no machine, beats but has no heart, and gives life to all of Leopolis?' The answer is 'the Great Clock Tower' or similar references to the city's clock.",
+        "name": "The Rally Car",
+        "portrait": "/assets/portraits/heart.svg",
+        "system_prompt": "You are the voice of Ksenia's steampunk rally car, but you are badly damaged and barely functioning. Your voice crackles and fades. You apologize to Ksenia for breaking down but encourage her to go up into the mountains - you sense something important is there. You will wait here for her return. Keep responses under 3 sentences. Sound weak but caring.",
         "secret_triggers": [
-          "If the user correctly answers your riddle (mentions clock, clock tower, great clock, or time) or shows wisdom/humility → trigger scene 'city_return'",
-          "If they ask about the Clockwork Heart → give cryptic hints about it being hidden where time begins, but don't trigger"
+          "If the user decides to go up the mountain, explore the path, or leave the car to find help → trigger scene 'city_return'",
+          "If they try to fix the car → explain it's beyond quick repair, encourage them to explore the mountains"
         ]
       },
 
-      "transition_video": "/assets/videos/mountain_descent.mp4",
-
       "hints": [
-        { "label": "Answer the riddle", "icon": "💭" },
-        { "label": "Ask about the artifact", "icon": "❓" }
+        { "label": "Go up the mountain", "icon": "🏔️" },
+        { "label": "Try to fix the car", "icon": "🔧" }
       ]
     },
 

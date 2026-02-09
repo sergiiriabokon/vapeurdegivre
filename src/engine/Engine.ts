@@ -183,7 +183,7 @@ class Engine {
 
     // Play transition video if available
     if (currentScene?.transition_video) {
-      await this.videoPlayer.play(currentScene.transition_video);
+      await this.videoPlayer.play(currentScene.transition_video, currentScene.transition_duration);
     } else {
       // Just fade to black briefly
       await this.sceneView.fadeOut();
