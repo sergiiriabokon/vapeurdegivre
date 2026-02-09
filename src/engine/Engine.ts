@@ -42,6 +42,11 @@ class Engine {
       // Set up event listeners
       this.setupEventListeners();
 
+      // Hide UI elements during intro
+      this.narrativeBox.hide();
+      this.chatOverlay.hide();
+      this.hintButtons.hide();
+
       // Hide loading screen
       this.hideLoadingScreen();
 
