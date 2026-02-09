@@ -7,6 +7,7 @@ import { NarrativeBox } from '../ui/NarrativeBox';
 import { ChatOverlay } from '../ui/ChatOverlay';
 import { HintButtons } from '../ui/HintButtons';
 import { VideoPlayer } from '../ui/VideoPlayer';
+import { musicPlayer } from '../ui/MusicPlayer';
 import type { Scene } from '../types';
 
 class Engine {
@@ -40,6 +41,9 @@ class Engine {
 
       // Hide loading screen
       this.hideLoadingScreen();
+
+      // Start background music
+      musicPlayer.play();
 
       this.initialized = true;
     } catch (error) {
