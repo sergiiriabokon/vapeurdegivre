@@ -110,6 +110,9 @@
         ]
       },
 
+      "transition_video": "/assets/videos/car_breakdown.mp4",
+      "transition_duration": 5,
+
       "hints": [
         { "label": "Go up the mountain", "icon": "🏔️" },
         { "label": "Try to fix the car", "icon": "🔧" }
