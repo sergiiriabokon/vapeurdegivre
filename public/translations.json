@@ -1,0 +1,138 @@
+{
+  "en": {
+    "language_name": "English",
+    "scenes": {
+      "race_signup": {
+        "narrative_text": "The winter air bites at your cheeks as you stand in the cobblestone square of Leopolis. Steam rises from nearby brass pipes, mixing with your breath. Before you lies the registration desk for the Winter Leopolis Rally Grand Prix, papers waiting for your signature.",
+        "npc_greeting": "Welcome to the Winter Leopolis Rally Grand Prix registration.",
+        "hints": ["Sign the documents", "Ask about the race"]
+      },
+      "in_car": {
+        "narrative_text": "You stand in the starting square of Leopolis, the crisp winter air filled with anticipation. Your rally car awaits - a magnificent steampunk machine of brass and steel. Other racers rev their engines around you. The Winter Leopolis Rally Grand Prix is about to begin.",
+        "hints": ["Get in and start the engine", "Inspect the car"]
+      },
+      "overheating_challenge": {
+        "narrative_text": "The rally has begun! You're pushing through the snowy mountain roads, but the dashboard shows a warning - you're in last place. Worse, the engine temperature gauge is climbing dangerously into the red. The car's brass pipes hiss with excess steam.",
+        "hints": ["How do I go faster in corners?", "Check the engine"]
+      },
+      "icy_road_challenge": {
+        "narrative_text": "Your rally technique is paying off! The car purrs with satisfaction as you've climbed from last place to 15th. But as you ascend higher into the mountains, the road becomes treacherously icy. The car slides unpredictably on the frozen surface.",
+        "hints": ["Slow down for safety", "Push through faster"]
+      },
+      "car_breakdown": {
+        "narrative_text": "A loud crack echoes through the mountains as your rally car shudders to a halt. Steam hisses from the engine, and the dashboard lights flicker and die. You step out into the cold mountain air. The car is broken, but ahead you see a path leading up into the mountains. Perhaps there's help to be found above.",
+        "hints": ["Go up the mountain", "Try to fix the car"]
+      },
+      "ski_resort": {
+        "narrative_text": "After a long trek up the snowy mountain path, you arrive at a cozy ski resort nestled among the peaks. Warm light spills from the windows, and the smell of hot cocoa drifts through the crisp air. Skiers glide down the slopes in the distance. Perhaps someone here can help with your broken car.",
+        "hints": ["Ask for help", "Warm up inside"]
+      },
+      "finale": {
+        "narrative_text": "Inside the Great Clock Tower, massive gears turn slowly overhead. At the center of the chamber, suspended in a cage of brass and crystal, pulses the legendary Clockwork Heart. Its rhythmic ticking echoes through the ages, the mechanical soul of Leopolis itself.",
+        "hints": ["Make a wish", "Ask about the city's history"]
+      }
+    }
+  },
+  "fr": {
+    "language_name": "Français",
+    "scenes": {
+      "race_signup": {
+        "narrative_text": "L'air hivernal mord vos joues alors que vous vous tenez sur la place pavée de Leopolis. La vapeur s'élève des tuyaux de laiton voisins, se mêlant à votre souffle. Devant vous se trouve le bureau d'inscription du Grand Prix Rallye d'Hiver de Leopolis, les papiers attendent votre signature.",
+        "npc_greeting": "Bienvenue à l'inscription du Grand Prix Rallye d'Hiver de Leopolis.",
+        "hints": ["Signer les documents", "Demander à propos de la course"]
+      },
+      "in_car": {
+        "narrative_text": "Vous vous tenez sur la place de départ de Leopolis, l'air frais d'hiver rempli d'anticipation. Votre voiture de rallye vous attend - une magnifique machine steampunk de laiton et d'acier. D'autres coureurs font vrombir leurs moteurs autour de vous. Le Grand Prix Rallye d'Hiver de Leopolis est sur le point de commencer.",
+        "hints": ["Monter et démarrer le moteur", "Inspecter la voiture"]
+      },
+      "overheating_challenge": {
+        "narrative_text": "Le rallye a commencé ! Vous poussez à travers les routes de montagne enneigées, mais le tableau de bord affiche un avertissement - vous êtes en dernière position. Pire encore, la jauge de température du moteur grimpe dangereusement dans le rouge. Les tuyaux de laiton de la voiture sifflent avec l'excès de vapeur.",
+        "hints": ["Comment aller plus vite dans les virages ?", "Vérifier le moteur"]
+      },
+      "icy_road_challenge": {
+        "narrative_text": "Votre technique de rallye porte ses fruits ! La voiture ronronne de satisfaction alors que vous êtes passé de la dernière place à la 15ème. Mais en montant plus haut dans les montagnes, la route devient dangereusement verglacée. La voiture glisse de manière imprévisible sur la surface gelée.",
+        "hints": ["Ralentir pour la sécurité", "Pousser plus vite"]
+      },
+      "car_breakdown": {
+        "narrative_text": "Un craquement fort résonne dans les montagnes alors que votre voiture de rallye s'arrête en tremblant. La vapeur siffle du moteur et les lumières du tableau de bord vacillent et s'éteignent. Vous sortez dans l'air froid de la montagne. La voiture est en panne, mais devant vous, vous voyez un chemin qui monte dans les montagnes. Peut-être y a-t-il de l'aide à trouver là-haut.",
+        "hints": ["Monter la montagne", "Essayer de réparer la voiture"]
+      },
+      "ski_resort": {
+        "narrative_text": "Après une longue randonnée sur le chemin de montagne enneigé, vous arrivez à une station de ski confortable nichée parmi les sommets. Une lumière chaude se déverse des fenêtres et l'odeur du chocolat chaud flotte dans l'air frais. Des skieurs glissent sur les pentes au loin. Peut-être que quelqu'un ici peut aider avec votre voiture en panne.",
+        "hints": ["Demander de l'aide", "Se réchauffer à l'intérieur"]
+      },
+      "finale": {
+        "narrative_text": "À l'intérieur de la Grande Tour de l'Horloge, d'énormes engrenages tournent lentement au-dessus. Au centre de la chambre, suspendu dans une cage de laiton et de cristal, pulse le légendaire Cœur Mécanique. Son tic-tac rythmique résonne à travers les âges, l'âme mécanique de Leopolis elle-même.",
+        "hints": ["Faire un vœu", "Demander l'histoire de la ville"]
+      }
+    }
+  },
+  "ru": {
+    "language_name": "Русский",
+    "scenes": {
+      "race_signup": {
+        "narrative_text": "Зимний воздух кусает ваши щёки, пока вы стоите на мощёной площади Леополиса. Пар поднимается из близлежащих латунных труб, смешиваясь с вашим дыханием. Перед вами стол регистрации на Зимнее Ралли Гран-При Леополиса, бумаги ждут вашей подписи.",
+        "npc_greeting": "Добро пожаловать на регистрацию Зимнего Ралли Гран-При Леополиса.",
+        "hints": ["Подписать документы", "Спросить о гонке"]
+      },
+      "in_car": {
+        "narrative_text": "Вы стоите на стартовой площади Леополиса, свежий зимний воздух наполнен предвкушением. Ваш раллийный автомобиль ждёт вас - великолепная стимпанк-машина из латуни и стали. Другие гонщики газуют вокруг вас. Зимнее Ралли Гран-При Леополиса вот-вот начнётся.",
+        "hints": ["Сесть и завести двигатель", "Осмотреть машину"]
+      },
+      "overheating_challenge": {
+        "narrative_text": "Ралли началось! Вы мчитесь по заснеженным горным дорогам, но приборная панель показывает предупреждение - вы на последнем месте. Хуже того, указатель температуры двигателя опасно поднимается в красную зону. Латунные трубы машины шипят от избытка пара.",
+        "hints": ["Как ехать быстрее в поворотах?", "Проверить двигатель"]
+      },
+      "icy_road_challenge": {
+        "narrative_text": "Ваша раллийная техника приносит плоды! Машина мурлычет от удовлетворения - вы поднялись с последнего места на 15-е. Но по мере подъёма в горы дорога становится предательски обледенелой. Машина непредсказуемо скользит по замёрзшей поверхности.",
+        "hints": ["Замедлиться для безопасности", "Продавить быстрее"]
+      },
+      "car_breakdown": {
+        "narrative_text": "Громкий треск эхом разносится по горам, когда ваш раллийный автомобиль содрогается и останавливается. Пар шипит из двигателя, огни приборной панели мерцают и гаснут. Вы выходите на холодный горный воздух. Машина сломана, но впереди вы видите тропу, ведущую вверх в горы. Возможно, там наверху можно найти помощь.",
+        "hints": ["Подняться в гору", "Попробовать починить машину"]
+      },
+      "ski_resort": {
+        "narrative_text": "После долгого подъёма по заснеженной горной тропе вы прибываете на уютный горнолыжный курорт, уютно расположившийся среди вершин. Тёплый свет льётся из окон, и аромат горячего какао витает в морозном воздухе. Лыжники скользят по склонам вдали. Возможно, кто-то здесь сможет помочь с вашей сломанной машиной.",
+        "hints": ["Попросить о помощи", "Согреться внутри"]
+      },
+      "finale": {
+        "narrative_text": "Внутри Великой Часовой Башни массивные шестерни медленно вращаются над головой. В центре зала, подвешенное в клетке из латуни и хрусталя, пульсирует легендарное Заводное Сердце. Его ритмичное тиканье отзывается эхом сквозь века - механическая душа самого Леополиса.",
+        "hints": ["Загадать желание", "Спросить об истории города"]
+      }
+    }
+  },
+  "uk": {
+    "language_name": "Українська",
+    "scenes": {
+      "race_signup": {
+        "narrative_text": "Зимове повітря кусає ваші щоки, поки ви стоїте на бруківці площі Леополіса. Пара здіймається з латунних труб поблизу, змішуючись з вашим диханням. Перед вами стіл реєстрації на Зимове Ралі Гран-Прі Леополіса, папери чекають на ваш підпис.",
+        "npc_greeting": "Ласкаво просимо на реєстрацію Зимового Ралі Гран-Прі Леополіса.",
+        "hints": ["Підписати документи", "Запитати про перегони"]
+      },
+      "in_car": {
+        "narrative_text": "Ви стоїте на стартовій площі Леополіса, свіже зимове повітря сповнене передчуття. Ваш ралійний автомобіль чекає на вас - чудова стімпанк-машина з латуні та сталі. Інші гонщики газують навколо вас. Зимове Ралі Гран-Прі Леополіса ось-ось почнеться.",
+        "hints": ["Сісти і завести двигун", "Оглянути машину"]
+      },
+      "overheating_challenge": {
+        "narrative_text": "Ралі почалося! Ви мчите засніженими гірськими дорогами, але приладова панель показує попередження - ви на останньому місці. Гірше того, покажчик температури двигуна небезпечно піднімається в червону зону. Латунні труби машини шиплять від надлишку пари.",
+        "hints": ["Як їхати швидше в поворотах?", "Перевірити двигун"]
+      },
+      "icy_road_challenge": {
+        "narrative_text": "Ваша ралійна техніка приносить плоди! Машина муркоче від задоволення - ви піднялися з останнього місця на 15-те. Але в міру підйому в гори дорога стає підступно крижаною. Машина непередбачувано ковзає по замерзлій поверхні.",
+        "hints": ["Сповільнитися для безпеки", "Тиснути швидше"]
+      },
+      "car_breakdown": {
+        "narrative_text": "Гучний тріск луною розноситься горами, коли ваш ралійний автомобіль здригається і зупиняється. Пара шипить з двигуна, вогні приладової панелі мерехтять і гаснуть. Ви виходите на холодне гірське повітря. Машина зламана, але попереду ви бачите стежку, що веде вгору в гори. Можливо, там нагорі можна знайти допомогу.",
+        "hints": ["Піднятися в гори", "Спробувати полагодити машину"]
+      },
+      "ski_resort": {
+        "narrative_text": "Після довгого підйому засніженою гірською стежкою ви прибуваєте на затишний гірськолижний курорт, що вмостився серед вершин. Тепле світло ллється з вікон, і аромат гарячого какао витає в морозному повітрі. Лижники ковзають схилами вдалині. Можливо, хтось тут зможе допомогти з вашою зламаною машиною.",
+        "hints": ["Попросити про допомогу", "Зігрітися всередині"]
+      },
+      "finale": {
+        "narrative_text": "Всередині Великої Годинникової Вежі масивні шестерні повільно обертаються над головою. В центрі зали, підвішене в клітці з латуні та кришталю, пульсує легендарне Заводне Серце. Його ритмічне цокання відлунює крізь віки - механічна душа самого Леополіса.",
+        "hints": ["Загадати бажання", "Запитати про історію міста"]
+      }
+    }
+  }
+}

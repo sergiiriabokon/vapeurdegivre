@@ -8,6 +8,8 @@ import { ChatOverlay } from '../ui/ChatOverlay';
 import { HintButtons } from '../ui/HintButtons';
 import { VideoPlayer } from '../ui/VideoPlayer';
 import { musicPlayer } from '../ui/MusicPlayer';
+import { LanguageSelector } from '../ui/LanguageSelector';
+import { languageService } from '../i18n/LanguageService';
 import type { Scene } from '../types';
 
 class Engine {
@@ -16,14 +18,18 @@ class Engine {
   private chatOverlay!: ChatOverlay;
   private hintButtons!: HintButtons;
   private videoPlayer!: VideoPlayer;
+  private languageSelector!: LanguageSelector;
   private initialized: boolean = false;
 
   async init(): Promise<void> {
     if (this.initialized) return;
 
     try {
-      // Load scene data
-      await sceneManager.loadScenes();
+      // Load scene data and translations
+      await Promise.all([
+        sceneManager.loadScenes(),
+        languageService.loadTranslations(),
+      ]);
 
       // Initialize UI components
       this.sceneView = new SceneView('#scene-view');
@@ -31,19 +37,23 @@ class Engine {
       this.chatOverlay = new ChatOverlay('#chat-overlay');
       this.hintButtons = new HintButtons('#hint-buttons');
       this.videoPlayer = new VideoPlayer('#video-player');
+      this.languageSelector = new LanguageSelector('#language-selector');
 
       // Set up event listeners
       this.setupEventListeners();
-
-      // Load start scene
-      const startSceneId = sceneManager.getStartSceneId();
-      await this.loadScene(startSceneId);
 
       // Hide loading screen
       this.hideLoadingScreen();
 
       // Start background music
       musicPlayer.play();
+
+      // Play intro video
+      await this.videoPlayer.play('/assets/videos/intro.mp4', 5);
+
+      // Show intro background and language selector
+      this.sceneView.setBackground('/assets/backgrounds/intro.png');
+      this.languageSelector.show();
 
       this.initialized = true;
     } catch (error) {
@@ -79,6 +89,15 @@ class Engine {
     eventBus.on('scene:transition', async ({ toSceneId }) => {
       await this.transitionToScene(toSceneId);
     });
+
+    // Handle language selection
+    eventBus.on('language:selected', async () => {
+      const startSceneId = sceneManager.getStartSceneId();
+      await this.loadScene(startSceneId);
+      this.narrativeBox.show();
+      this.chatOverlay.show();
+      this.hintButtons.show();
+    });
   }
 
   private async loadScene(sceneId: string): Promise<void> {
@@ -90,11 +109,19 @@ class Engine {
     stateManager.setCurrentScene(sceneId);
     eventBus.emit('scene:load', { sceneId });
 
+    // Get translated text
+    const translation = languageService.getSceneText(sceneId);
+    const narrativeText = translation?.narrative_text || scene.narrative_text;
+    const hints = scene.hints?.map((hint, i) => ({
+      ...hint,
+      label: translation?.hints[i] || hint.label,
+    })) || [];
+
     // Update UI
     this.sceneView.setBackground(scene.background_image);
-    this.narrativeBox.setText(scene.narrative_text);
+    this.narrativeBox.setText(narrativeText);
     this.chatOverlay.setNPC(scene.npc);
-    this.hintButtons.setHints(scene.hints || []);
+    this.hintButtons.setHints(hints);
 
     // Initialize chat session for this scene
     chatSession.initForScene(scene);
