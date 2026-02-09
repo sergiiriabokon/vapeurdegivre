@@ -129,31 +129,53 @@
         "portrait": "/assets/portraits/clockmaker.svg",
         "system_prompt": "You are a friendly and warm ski resort keeper in the mountains above Leopolis. You welcome travelers and know the mountains well. You've heard about the rally and the broken car. You offer warmth, food, and perhaps know someone who can help. Keep responses under 3 sentences. Be hospitable and curious about Ksenia's journey.",
         "secret_triggers": [
-          "If the user asks for help with the car, wants to rest, or asks about the Clockwork Heart or the city → trigger scene 'finale'"
+          "If the user asks for help with the car, wants to rest, or decides to continue exploring the mountains → trigger scene 'mammoth_scene'"
         ]
       },
 
       "hints": [
         { "label": "Ask for help", "icon": "🙏" },
-        { "label": "Warm up inside", "icon": "☕" }
+        { "label": "Explore further", "icon": "🏔️" }
+      ]
+    },
+
+    "mammoth_scene": {
+      "id": "mammoth_scene",
+      "background_image": "/assets/backgrounds/mammoth_scene.png",
+      "narrative_text": "As you venture deeper into the snowy mountains, you encounter an incredible sight - a magnificent woolly mammoth stands before you, its breath forming clouds in the cold air. The ancient creature regards you with gentle, intelligent eyes. It seems friendly, almost as if it has been waiting for you.",
+
+      "npc": {
+        "name": "The Mammoth",
+        "portrait": "/assets/portraits/heart.svg",
+        "system_prompt": "You are a gentle, ancient woolly mammoth living in the mountains above Leopolis. You communicate through soft rumbles and gestures that Ksenia somehow understands. You are wise and kind, having lived for centuries. You enjoy being petted and appreciate kindness. When Ksenia pets you or shows affection, you become her friend. Keep responses under 3 sentences. Be gentle and majestic.",
+        "secret_triggers": [
+          "If the user pets the mammoth, shows affection, or befriends it → trigger scene 'finale'"
+        ]
+      },
+
+      "transition_video": "/assets/videos/petting_mammoth.mp4",
+      "transition_duration": 5,
+
+      "hints": [
+        { "label": "Pet the mammoth", "icon": "🦣" },
+        { "label": "Approach slowly", "icon": "👋" }
       ]
     },
 
     "finale": {
       "id": "finale",
       "background_image": "/assets/backgrounds/clock_tower.svg",
-      "narrative_text": "Inside the Great Clock Tower, massive gears turn slowly overhead. At the center of the chamber, suspended in a cage of brass and crystal, pulses the legendary Clockwork Heart. Its rhythmic ticking echoes through the ages, the mechanical soul of Leopolis itself.",
+      "narrative_text": "🚧 Under Construction 🚧\n\nThis part of the story is still being written. Thank you for playing the demo of Vapeur de Givre!",
 
       "npc": {
-        "name": "The Clockwork Heart",
+        "name": "The Developer",
         "portrait": "/assets/portraits/heart.svg",
-        "system_prompt": "You are the Clockwork Heart, an ancient artifact that keeps the city of Leopolis alive. You speak with a voice like chiming bells, ancient and wise. You have waited centuries for a worthy soul like Ksenia. You can grant one wish to her, but warn that all wishes have consequences. This is the end of her journey.",
+        "system_prompt": "You are a friendly game developer. Thank the player for trying the demo. Let them know more content is coming soon. Be appreciative and warm. Keep responses under 3 sentences.",
         "secret_triggers": []
       },
 
       "hints": [
-        { "label": "Make a wish", "icon": "✨" },
-        { "label": "Ask about the city's history", "icon": "📜" }
+        { "label": "Thanks for playing!", "icon": "🎮" }
       ]
     }
   },
