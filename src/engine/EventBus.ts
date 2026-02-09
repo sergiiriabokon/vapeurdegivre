@@ -11,6 +11,7 @@ interface EventMap {
   'hint:click': { label: string };
   'state:updated': void;
   'error': { message: string; error?: Error };
+  'language:selected': { language: string };
 }
 
 type EventName = keyof EventMap;
