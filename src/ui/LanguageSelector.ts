@@ -24,7 +24,6 @@ export class LanguageSelector {
             .map(
               (lang) => `
             <button class="language-btn" data-lang="${lang.code}">
-              <span class="flag">${this.getFlag(lang.code)}</span>
               <span class="name">${lang.name}</span>
             </button>
           `
@@ -43,16 +42,6 @@ export class LanguageSelector {
         this.selectLanguage(lang);
       });
     });
-  }
-
-  private getFlag(code: Language): string {
-    const flags: Record<Language, string> = {
-      en: '🇬🇧',
-      fr: '🇫🇷',
-      ru: '🇷🇺',
-      uk: '🇺🇦',
-    };
-    return flags[code];
   }
 
   private selectLanguage(lang: Language): void {
