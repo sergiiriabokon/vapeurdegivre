@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vapeur de Givre - A Steampunk Narrative Adventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/variables.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/components/scene.css" />
+    <link rel="stylesheet" href="/styles/components/chat.css" />
+    <link rel="stylesheet" href="/styles/components/video.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <div id="scene-view"></div>
+      <div id="narrative-box"></div>
+      <div id="chat-overlay"></div>
+      <div id="hint-buttons"></div>
+      <div id="video-player"></div>
+      <div id="loading-screen">
+        <div class="loading-content">
+          <div class="loading-spinner"></div>
+          <p>Loading Vapeur de Givre...</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

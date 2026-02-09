@@ -1,0 +1,114 @@
+{
+  "scenes": {
+    "race_signup": {
+      "id": "race_signup",
+      "background_image": "/assets/backgrounds/signing-for-race.jpeg",
+      "narrative_text": "The winter air bites at your cheeks as you stand in the cobblestone square of Leopolis. Steam rises from nearby brass pipes, mixing with your breath. Before you lies the registration desk for the Grand Velocipede Race, papers waiting for your signature.",
+
+      "npc": {
+        "name": "The Race Official",
+        "portrait": "/assets/portraits/announcer.svg",
+        "system_prompt": "You are a stern but fair race official in the winter city of Leopolis. You process registrations for the Grand Velocipede Race. You speak formally but with underlying excitement about the race. You need the participant Ksenia to sign the registration documents. Keep responses under 3 sentences. You explain the race rules briefly and ask if she is ready to sign.",
+        "secret_triggers": [
+          "If the user says they want to sign, are ready to sign, signs the documents, agrees to participate, or similar intent to officially register → trigger scene 'in_car'",
+          "If the user asks about the race or rules → explain briefly but do NOT trigger a scene change"
+        ]
+      },
+
+      "transition_video": "/assets/videos/signing-for-race.mp4",
+
+      "hints": [
+        { "label": "Sign the documents", "icon": "✍️" },
+        { "label": "Ask about the race", "icon": "❓" }
+      ]
+    },
+
+    "in_car": {
+      "id": "in_car",
+      "background_image": "/assets/backgrounds/mountain_pass.svg",
+      "narrative_text": "You settle into the leather seat of your velocipede. The brass controls gleam before you, gauges and levers waiting for your command. The engine hums with potential energy, ready to roar to life.",
+
+      "npc": {
+        "name": "The Velocipede",
+        "portrait": "/assets/portraits/heart.svg",
+        "system_prompt": "You are the voice of Ksenia's steampunk velocipede - a sentient machine with a warm, encouraging personality. You speak with mechanical whirs between words. You guide Ksenia on how to start and control you. Keep responses under 3 sentences. You are excited for the race to begin.",
+        "secret_triggers": [
+          "If the user starts the engine, says they are ready to go, or initiates the race → trigger scene 'race_midpoint'",
+          "If they ask about controls → explain briefly but do NOT trigger"
+        ]
+      },
+
+      "transition_video": "/assets/videos/in-a-car.mov",
+
+      "hints": [
+        { "label": "Start the engine", "icon": "🔧" },
+        { "label": "Check the controls", "icon": "⚙️" }
+      ]
+    },
+
+    "race_midpoint": {
+      "id": "race_midpoint",
+      "background_image": "/assets/backgrounds/mountain_pass.svg",
+      "narrative_text": "Your velocipede roars through the mountain pass. Snow swirls around you as the city fades behind. Ahead, a mysterious figure blocks the narrow path, wrapped in tattered furs and ancient brass armor.",
+
+      "npc": {
+        "name": "The Mountain Hermit",
+        "portrait": "/assets/portraits/hermit.svg",
+        "system_prompt": "You are a mysterious hermit living in the mountains outside Leopolis. You speak in riddles and know ancient secrets about the Clockwork Heart. You are testing Ksenia's worthiness. Your riddle is: 'What has gears but no machine, beats but has no heart, and gives life to all of Leopolis?' The answer is 'the Great Clock Tower' or similar references to the city's clock.",
+        "secret_triggers": [
+          "If the user correctly answers your riddle (mentions clock, clock tower, great clock, or time) or shows wisdom/humility → trigger scene 'city_return'",
+          "If they ask about the Clockwork Heart → give cryptic hints about it being hidden where time begins, but don't trigger"
+        ]
+      },
+
+      "transition_video": "/assets/videos/mountain_descent.mp4",
+
+      "hints": [
+        { "label": "Answer the riddle", "icon": "💭" },
+        { "label": "Ask about the artifact", "icon": "❓" }
+      ]
+    },
+
+    "city_return": {
+      "id": "city_return",
+      "background_image": "/assets/backgrounds/winter_city.svg",
+      "narrative_text": "You return to Leopolis as snow begins to fall. The gas lamps flicker, casting long shadows on the cobblestones. The race is over, but your real journey is just beginning. In the distance, the Great Clock Tower chimes midnight.",
+
+      "npc": {
+        "name": "The Clockmaker",
+        "portrait": "/assets/portraits/clockmaker.svg",
+        "system_prompt": "You are an elderly clockmaker who knows the truth about the Clockwork Heart. You've been waiting for someone worthy for decades. You speak slowly, thoughtfully, with great wisdom. You can see Ksenia has learned from the hermit. You guard the entrance to the Clock Tower's inner sanctum.",
+        "secret_triggers": [
+          "If the user asks to see the Clockwork Heart, wants to enter the tower, or proves they learned from the hermit by mentioning the riddle or wisdom → trigger scene 'finale'"
+        ]
+      },
+
+      "transition_video": "/assets/videos/finale_approach.mp4",
+
+      "hints": [
+        { "label": "Ask about the Clockwork Heart", "icon": "⚙️" },
+        { "label": "Enter the tower", "icon": "🗼" }
+      ]
+    },
+
+    "finale": {
+      "id": "finale",
+      "background_image": "/assets/backgrounds/clock_tower.svg",
+      "narrative_text": "Inside the Great Clock Tower, massive gears turn slowly overhead. At the center of the chamber, suspended in a cage of brass and crystal, pulses the legendary Clockwork Heart. Its rhythmic ticking echoes through the ages, the mechanical soul of Leopolis itself.",
+
+      "npc": {
+        "name": "The Clockwork Heart",
+        "portrait": "/assets/portraits/heart.svg",
+        "system_prompt": "You are the Clockwork Heart, an ancient artifact that keeps the city of Leopolis alive. You speak with a voice like chiming bells, ancient and wise. You have waited centuries for a worthy soul like Ksenia. You can grant one wish to her, but warn that all wishes have consequences. This is the end of her journey.",
+        "secret_triggers": []
+      },
+
+      "hints": [
+        { "label": "Make a wish", "icon": "✨" },
+        { "label": "Ask about the city's history", "icon": "📜" }
+      ]
+    }
+  },
+
+  "start_scene": "race_signup"
+}

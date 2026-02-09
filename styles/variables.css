@@ -1,0 +1,44 @@
+:root {
+  /* Steampunk Winter Palette */
+  --color-bg: #1a1a2e;
+  --color-bg-panel: rgba(30, 30, 50, 0.9);
+  --color-bg-panel-light: rgba(40, 40, 60, 0.95);
+  --color-text: #e8e8e8;
+  --color-text-muted: #a0a0a0;
+  --color-brass: #b5a642;
+  --color-brass-light: #d4c36a;
+  --color-frost: #a8d5e5;
+  --color-accent: #e94560;
+  --color-success: #4ecca3;
+  --color-error: #ff6b6b;
+
+  /* Typography */
+  --font-narrative: 'Merriweather', Georgia, serif;
+  --font-ui: 'Inter', system-ui, sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Chat dimensions */
+  --chat-width: 400px;
+  --chat-max-height: 50vh;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+}

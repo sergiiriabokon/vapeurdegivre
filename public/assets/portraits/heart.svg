@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="heart-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="70%" style="stop-color:#8b0000"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </radialGradient>
+    <radialGradient id="inner-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff6b6b"/>
+      <stop offset="100%" style="stop-color:#e94560"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#heart-bg)"/>
+  <circle cx="100" cy="100" r="60" fill="none" stroke="#b5a642" stroke-width="3"/>
+  <circle cx="100" cy="100" r="45" fill="none" stroke="#b5a642" stroke-width="2"/>
+  <circle cx="100" cy="100" r="30" fill="url(#inner-glow)"/>
+  <line x1="100" y1="100" x2="100" y2="70" stroke="#b5a642" stroke-width="3"/>
+  <line x1="100" y1="100" x2="125" y2="90" stroke="#b5a642" stroke-width="2"/>
+  <circle cx="100" cy="100" r="5" fill="#b5a642"/>
+  <circle cx="60" cy="60" r="10" fill="none" stroke="#b5a642" stroke-width="1" opacity="0.5"/>
+  <circle cx="140" cy="60" r="8" fill="none" stroke="#b5a642" stroke-width="1" opacity="0.5"/>
+  <circle cx="60" cy="140" r="12" fill="none" stroke="#b5a642" stroke-width="1" opacity="0.5"/>
+  <circle cx="140" cy="140" r="10" fill="none" stroke="#b5a642" stroke-width="1" opacity="0.5"/>
+</svg>
