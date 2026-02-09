@@ -7,6 +7,7 @@ export class VideoPlayer {
   private fadeOverlay: HTMLElement | null = null;
   private resolvePlay: (() => void) | null = null;
   private durationTimeout: number | null = null;
+  private isEnding: boolean = false;
 
   constructor(selector: string) {
     const el = document.querySelector<HTMLElement>(selector);
@@ -61,6 +62,7 @@ export class VideoPlayer {
 
     return new Promise((resolve) => {
       this.resolvePlay = resolve;
+      this.isEnding = false;
 
       // Clear any existing duration timeout
       if (this.durationTimeout) {
@@ -72,19 +74,25 @@ export class VideoPlayer {
       this.skipButton?.classList.remove('visible');
       this.fadeOverlay?.classList.remove('active');
 
-      // Set video source and play
+      // Set video source
       this.videoElement!.src = videoUrl;
       this.videoElement!.currentTime = 0;
+
+      // If maxDuration is set, loop the video so 'ended' event won't fire
+      this.videoElement!.loop = maxDuration !== undefined && maxDuration > 0;
 
       // Show player
       this.element.classList.add('active');
 
-      // Set duration timeout if specified
-      if (maxDuration && maxDuration > 0) {
-        this.durationTimeout = window.setTimeout(() => {
-          this.onVideoEnd();
-        }, maxDuration * 1000);
-      }
+      // Wait for video to be ready, then start playback and timer
+      this.videoElement!.oncanplay = () => {
+        // Set duration timeout if specified (after video is ready)
+        if (maxDuration && maxDuration > 0) {
+          this.durationTimeout = window.setTimeout(() => {
+            this.onVideoEnd();
+          }, maxDuration * 1000);
+        }
+      };
 
       // Start playback
       this.videoElement!.play().catch((error) => {
@@ -102,6 +110,10 @@ export class VideoPlayer {
   }
 
   private async onVideoEnd(): Promise<void> {
+    // Prevent multiple calls
+    if (this.isEnding) return;
+    this.isEnding = true;
+
     // Clear duration timeout
     if (this.durationTimeout) {
       clearTimeout(this.durationTimeout);
