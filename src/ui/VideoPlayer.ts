@@ -20,7 +20,7 @@ export class VideoPlayer {
 
   private render(): void {
     this.element.innerHTML = `
-      <video playsinline></video>
+      <video playsinline muted></video>
       <button class="skip-btn">Skip</button>
       <div class="fade-overlay"></div>
     `;
@@ -74,27 +74,22 @@ export class VideoPlayer {
       this.skipButton?.classList.remove('visible');
       this.fadeOverlay?.classList.remove('active');
 
-      // Set video source
-      this.videoElement!.src = videoUrl;
-      this.videoElement!.currentTime = 0;
-
       // If maxDuration is set, loop the video so 'ended' event won't fire
       this.videoElement!.loop = maxDuration !== undefined && maxDuration > 0;
 
       // Show player
       this.element.classList.add('active');
 
-      // Wait for video to be ready, then start playback and timer
-      this.videoElement!.oncanplay = () => {
-        // Set duration timeout if specified (after video is ready)
-        if (maxDuration && maxDuration > 0) {
-          this.durationTimeout = window.setTimeout(() => {
-            this.onVideoEnd();
-          }, maxDuration * 1000);
-        }
-      };
+      // Set duration timeout if specified
+      if (maxDuration && maxDuration > 0) {
+        this.durationTimeout = window.setTimeout(() => {
+          this.onVideoEnd();
+        }, maxDuration * 1000);
+      }
 
-      // Start playback
+      // Set video source and play
+      this.videoElement!.src = videoUrl;
+      this.videoElement!.load();
       this.videoElement!.play().catch((error) => {
         console.error('Failed to play video:', error);
         this.onVideoEnd();
