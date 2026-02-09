@@ -105,12 +105,12 @@
         "portrait": "/assets/portraits/heart.svg",
         "system_prompt": "You are the voice of Ksenia's steampunk rally car, but you are badly damaged and barely functioning. Your voice crackles and fades. You apologize to Ksenia for breaking down but encourage her to go up into the mountains - you sense something important is there. You will wait here for her return. Keep responses under 3 sentences. Sound weak but caring.",
         "secret_triggers": [
-          "If the user decides to go up the mountain, explore the path, or leave the car to find help → trigger scene 'city_return'",
+          "If the user decides to go up the mountain, explore the path, or leave the car to find help → trigger scene 'ski_resort'",
           "If they try to fix the car → explain it's beyond quick repair, encourage them to explore the mountains"
         ]
       },
 
-      "transition_video": "/assets/videos/car_breakdown.mp4",
+      "transition_video": "/assets/videos/walk_mountains.mp4",
       "transition_duration": 5,
 
       "hints": [
@@ -119,25 +119,23 @@
       ]
     },
 
-    "city_return": {
-      "id": "city_return",
-      "background_image": "/assets/backgrounds/winter_city.svg",
-      "narrative_text": "You return to Leopolis as snow begins to fall. The gas lamps flicker, casting long shadows on the cobblestones. The race is over, but your real journey is just beginning. In the distance, the Great Clock Tower chimes midnight.",
+    "ski_resort": {
+      "id": "ski_resort",
+      "background_image": "/assets/backgrounds/ski_resort.png",
+      "narrative_text": "After a long trek up the snowy mountain path, you arrive at a cozy ski resort nestled among the peaks. Warm light spills from the windows, and the smell of hot cocoa drifts through the crisp air. Skiers glide down the slopes in the distance. Perhaps someone here can help with your broken car.",
 
       "npc": {
-        "name": "The Clockmaker",
+        "name": "The Resort Keeper",
         "portrait": "/assets/portraits/clockmaker.svg",
-        "system_prompt": "You are an elderly clockmaker who knows the truth about the Clockwork Heart. You've been waiting for someone worthy for decades. You speak slowly, thoughtfully, with great wisdom. You can see Ksenia has learned from the hermit. You guard the entrance to the Clock Tower's inner sanctum.",
+        "system_prompt": "You are a friendly and warm ski resort keeper in the mountains above Leopolis. You welcome travelers and know the mountains well. You've heard about the rally and the broken car. You offer warmth, food, and perhaps know someone who can help. Keep responses under 3 sentences. Be hospitable and curious about Ksenia's journey.",
         "secret_triggers": [
-          "If the user asks to see the Clockwork Heart, wants to enter the tower, or proves they learned from the hermit by mentioning the riddle or wisdom → trigger scene 'finale'"
+          "If the user asks for help with the car, wants to rest, or asks about the Clockwork Heart or the city → trigger scene 'finale'"
         ]
       },
 
-      "transition_video": "/assets/videos/finale_approach.mp4",
-
       "hints": [
-        { "label": "Ask about the Clockwork Heart", "icon": "⚙️" },
-        { "label": "Enter the tower", "icon": "🗼" }
+        { "label": "Ask for help", "icon": "🙏" },
+        { "label": "Warm up inside", "icon": "☕" }
       ]
     },
 
