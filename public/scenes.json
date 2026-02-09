@@ -38,8 +38,8 @@
         ]
       },
 
-      "transition_video": "/assets/videos/in-a-car.mov",
-      "transition_duration": 2,
+      "transition_video": "/assets/videos/starting_drive.mp4",
+      "transition_duration": 5,
 
       "hints": [
         { "label": "Get in and start the engine", "icon": "🏎️" },
